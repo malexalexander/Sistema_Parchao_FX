@@ -1,0 +1,418 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #252a32;
+}
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 255px;
+    background: #20252b;
+    color: white;
+    padding: 25px 17px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: bold;
+    color: white;
+    margin: 5px 10px;
+}
+
+.logo span {
+    color: #f4a340;
+}
+
+.sidebar-subtitle {
+    font-size: 10px;
+    color: #999;
+    margin: 0 10px 30px;
+    letter-spacing: 1px;
+}
+
+.nav-title {
+    color: #858b94;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 25px 10px 10px;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    display: block;
+    color: #d5d8dc;
+    text-decoration: none;
+    padding: 12px;
+    margin: 4px 0;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: .2s;
+}
+
+.nav-link:hover {
+    background: #343b43;
+    color: #f4a340;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding: 20px 10px 5px;
+    color: #999;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sidebar-bottom strong {
+    color: #f4a340;
+}
+
+.main-content {
+    width: calc(100% - 255px);
+    margin-left: 255px;
+    min-height: 100vh;
+}
+
+.topbar {
+    background: white;
+    padding: 23px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    gap: 15px;
+}
+
+.breadcrumb {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.topbar h1 {
+    font-size: 24px;
+    margin-top: 7px;
+}
+
+.admin-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: #fff0dc;
+    color: #b87920;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+}
+
+.admin-user strong,
+.admin-user small {
+    display: block;
+}
+
+.admin-user small {
+    color: #999;
+    margin-top: 4px;
+}
+
+.page-content {
+    padding: 30px;
+}
+
+.footer {
+    padding: 20px 30px;
+    color: #999;
+    font-size: 12px;
+}
+
+.panel,
+.card,
+.table-container {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 3px 12px #00000008;
+}
+
+button,
+.btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    padding: 11px 16px;
+    background: #f4a340;
+    color: #20252b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+input,
+select,
+textarea {
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    width: 100%;
+    margin-top: 7px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 13px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+th {
+    background: #f8f8f8;
+}
+
+@media(max-width: 800px) {
+    .sidebar {
+        width: 210px;
+    }
+
+    .main-content {
+        width: calc(100% - 210px);
+        margin-left: 210px;
+    }
+
+    .page-content {
+        padding: 15px;
+        overflow-x: auto;
+    }
+}
+
+@media(max-width: 600px) {
+    .admin-layout {
+        display: block;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .topbar {
+        padding: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cards-dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    gap: 18px;
+}
+
+.cards-dashboard .card p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.cards-dashboard .card h2 {
+    font-size: 30px;
+}
+
+@media(max-width: 1000px) {
+    .cards-dashboard {
+        grid-template-columns: repeat(2, minmax(130px, 1fr));
+    }
+}
+
+@media(max-width: 450px) {
+    .cards-dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   IDENTIDAD VISUAL OFICIAL DE PARCHAO
+===================================== */
+
+:root {
+    --parchao-oscuro: #201919;
+    --parchao-rojo: #B70E0E;
+    --parchao-crema: #FFF4E1;
+}
+
+/* Fondo general */
+body {
+    background-color: var(--parchao-crema);
+    color: var(--parchao-oscuro);
+}
+
+/* Menú lateral */
+.sidebar {
+    background-color: var(--parchao-oscuro);
+    color: var(--parchao-crema);
+}
+
+/* Enlaces del menú */
+.sidebar .nav-link {
+    color: var(--parchao-crema);
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: var(--parchao-rojo);
+    color: var(--parchao-crema);
+}
+
+/* Barra superior */
+.topbar {
+    background-color: var(--parchao-crema);
+    color: var(--parchao-oscuro);
+}
+
+/* Contenido principal */
+.main-content {
+    background-color: var(--parchao-crema);
+}
+
+/* Paneles y tarjetas */
+.panel,
+.card {
+    background-color: var(--parchao-crema);
+    color: var(--parchao-oscuro);
+}
+
+/* Títulos */
+h1,
+h2,
+h3 {
+    color: var(--parchao-oscuro);
+}
+
+/* Botones */
+button,
+.btn {
+    background-color: var(--parchao-rojo);
+    color: var(--parchao-crema);
+    border: none;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el cursor */
+button:hover,
+.btn:hover {
+    background-color: var(--parchao-oscuro);
+    color: var(--parchao-crema);
+}
+
+/* Campos de formulario */
+input,
+textarea,
+select {
+    border: 1px solid var(--parchao-oscuro);
+    background-color: var(--parchao-crema);
+    color: var(--parchao-oscuro);
+}
+
+/* Tablas */
+table {
+    color: var(--parchao-oscuro);
+}
+
+thead {
+    background-color: var(--parchao-oscuro);
+    color: var(--parchao-crema);
+}
+
+tbody tr {
+    background-color: var(--parchao-crema);
+}
+
+/* Pie de página */
+.footer {
+    background-color: var(--parchao-crema);
+    color: var(--parchao-oscuro);
+}
